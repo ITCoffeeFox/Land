@@ -1,0 +1,1612 @@
+#kivy 2.0.0
+#:import Factory kivy.factory.Factory
+#:import CheckBox kivy.uix.checkbox
+#:import ScrollView kivy.uix.scrollview
+#:import DropDown kivy.uix.dropdown
+
+
+WindowManager:
+	LoginWindow:
+	CreateHostAccount1Window:
+	CreateHostAccount2Window:
+	CreateUserAccountWindow:
+	ExploreLandWindow:
+	BrowseLandWindow:
+	FavoritesWindow:
+	ProfileWindow:
+	FAQWindow:
+
+
+
+############## FILTER WIDGET FOR SEARCH PAGE #########
+<State@DropDown>:
+	#1
+	Button:
+		text: 'Alabama'
+		size_hint_y: None
+		height: 30
+	#2
+	Button:
+		text: 'Alaska'
+		size_hint_y: None
+		height: 30
+	#3
+	Button:
+		text: 'Arizona'
+		size_hint_y: None
+		height: 30
+	#4
+	Button:
+		text: 'Arkansas'
+		size_hint_y: None
+		height: 30
+	#5
+	Button:
+		text: 'California'
+		size_hint_y: None
+		height: 30
+	#6
+	Button:
+		text: 'Colorado'
+		size_hint_y: None
+		height: 30
+	#7
+	Button:
+		text: 'Connecticut'
+		size_hint_y: None
+		height: 30
+	#8
+	Button:
+		text: 'Delaware'
+		size_hint_y: None
+		height: 30
+	#9
+	Button:
+		text: 'Florida'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Georgia'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Hawaii'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Idaho'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Illinois'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Indiana'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Iowa'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Kansas'
+		size_hint_y: None
+		height: 30
+
+	Button:
+		text: 'Kentucky'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Louisiana'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Maine'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Maryland'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Massachusetts'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Michigan'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Minnesota'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Mississippi'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Missouri'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Montana'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Nebraska'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Nevada'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Nevada'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'New Hampshire'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'New Jersey'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'New Mexico'
+		size_hint_y: None
+		height: 30
+
+	Button:
+		text: 'New York'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'North Craolina'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'North Dakota'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Ohio'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Oklahoma'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Oregon'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Pennsylvania'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Rhode Island'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'South Carolina'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'South Dakota'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Tennessee'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Texas'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Utah'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Vermont'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Virginia'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Washington'
+		size_hint_y: None
+		height: 30
+
+	Button:
+		text: 'West Virginia'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Wisconsin'
+		size_hint_y: None
+		height: 30
+	Button:
+		text: 'Wyoming'
+		size_hint_y: None
+		height: 30
+
+<Country@DropDown>:
+	Button:
+		id: US
+		text: 'United States'
+		size_hint_y: None
+		height: 30
+
+
+<Filter@Popup>:
+	size_hint: (0.75, 0.75)
+	pos_hint: {'x': 0, 'y': 0.1}
+	title: 'Filter'
+	auto_dismiss: True
+	GridLayout:
+
+		cols: 4
+
+		Label:
+			text:'Mountain View'
+			font_size: 10
+			color: 1, 0, 0, 1
+
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.MtView(self.state)
+		Label:
+			text: 'Camping'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.Camping(self.state)
+		Label:
+			text: 'Hunting'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.Hunting(self.state)        
+
+		Label:
+			text:'Fishing'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:       
+	    		app.root.Fishing(self.state)
+
+		Label:
+			text:'Wedding Venue'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]	
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	    	on_state:	
+	    		app.root.WeddingV(self.state)
+
+	    Label:
+			text:'Off Roading'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]	
+	        on_state:
+	        	app.root.OffRoading(self.state)                
+		Label:
+			text:'Firearms Shooting Allowed'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.FirearmsYes(self.state)	                
+		Label:
+			text:'Desert View'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.DesertView(self.state)
+
+		Label:
+			text:'Ocean View'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.OceanView(self.state)	
+
+		Label:
+			text:'Hiking'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]	
+	        on_state:
+	        	app.root.Hiking(self.state)
+	        	                
+		Label:
+			text:'House'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14] 
+	        on_state:
+	        	app.root.House(self.state)              
+		Label:
+			text:'Firing Range'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]	
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.FiringRange(self.state)
+          
+	                
+		Label:
+			text:'Stage'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]	
+	        on_state:
+	        	app.root.Stage(self.state)
+          
+
+
+		Label:
+			text:'Rock Climbing'
+			font_size: 10
+			color: 1, 0, 0, 1
+		CheckBox:
+			id:RCCB
+			canvas.before:
+	            Color:
+	                rgb: 1,0,0
+	            Rectangle:
+	                pos:self.center_x-8, self.center_y-8
+	                size:[16,16]	
+	            Color:
+                	rgb: 0,0,0
+	            Rectangle:
+	                pos:self.center_x-7, self.center_y-7
+	                size:[14,14]
+	        on_state:
+	        	app.root.RockClimbing(self.state)
+
+
+
+
+
+
+
+###########################################################
+
+
+
+
+
+################## ACTION BAR ATTRIBUTES #####################
+
+<ActionBar>:
+	padding: '2sp'
+	canvas:
+		Color:
+			rgba: self.background_color
+		BorderImage:
+			pos: self.pos
+			size: self.size
+			source: self.background_image
+
+###############################################################
+
+
+
+
+####################### LOGIN WINDOW ############################
+
+<LoginWindow>:
+	name: 'Login'
+
+	email: email
+	password: password
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+
+
+    FloatLayout:
+
+    	Label:
+    		color: 1, 0, 0, 1
+    		text: 'Beta version of land app by Ian Taylor; Please Note: This App is extremely underdeveloped.(V 0.0.1)'
+    		font_size: 15
+    		pos_hint: {'x': -.05, 'y': .47}
+
+    	Label:
+    		color: 1, 0, 0, 1
+    		text: 'Email: '
+    		font_size: 40
+    		pos_hint: {'x':-.3, 'y':.4}
+    	TextInput:
+    		id: email
+    		multiline: False
+    		size_hint: (.5,.05)
+    		pos_hint: {'x':.28, 'y':.87}
+    	Label:
+    		color: 1, 0, 0, 1
+    		text: 'Password: '
+    		font_size: 40
+    		pos_hint: {'x':-.35, 'y':.3}
+    	TextInput:
+    		id: password
+    		multiline: False
+    		size_hint: (.5, .05)
+    		pos_hint: {'x':.28, 'y':.765}
+		Button:
+			background_color: (.75, 0, .82, 1)
+			pos_hint: {'x':.35, 'y':.55}
+			size_hint:(.3, .15)
+			text: 'Login'
+			on_press: 
+				root.loginbtn()
+			on_release:
+				app.root.current = 'ExploreLand' if root.loginbtn() == True else "Login"
+		Label:
+			color: 1,0,0,1
+			text: 'Create An Account:'
+			font_size: 40
+			pos_hint: {'x':0, 'y':-.08}
+		Button:
+			background_color: .75, 0, .7, .9
+			pos_hint: {'x':.35, 'y':.17}
+			size_hint: (.3, .15)
+			text: 'Create a Host Account'
+			on_release:
+				app.root.current = 'CreateHostAccount'
+
+		Button:
+			background_color: .75,0,.7,.9
+			pos_hint: {'x':.35, 'y':.01}
+			size_hint: (.3, .15)
+			text: 'Create a User Account'
+			on_release:
+				app.root.current = 'CreateUserAccount'
+
+
+##############################################################
+
+
+
+
+
+
+
+
+############# Host Account Page ##############################
+
+<CreateHostAccount1Window>:
+
+	name:'CreateHostAccount'
+
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+    FloatLayout:
+		Button:
+		    text:'Back'
+		    size_hint: (.15, .1)
+		    pos_hint: {'x': .05, 'y':.85}
+		    on_release:
+		    	app.root.current = 'Login'
+
+
+    	ScrollView:
+    	    size_hint_y: .73
+    		pos_hint: {'x': 0.1,'y': .11}
+    		do_scroll_x: False
+    		do_scroll_y: True
+    		scroll_type: ['bars', 'content']
+
+
+    		GridLayout:
+
+    			size: (root.width, root.height)
+    			size_hint_x: 0.8
+    			size_hint_y: 2
+    			cols: 1
+    			height: self.minimum_height
+		        row_default_height: 30
+		        row_force_default: True
+		        spacing: 25
+
+		        Label:
+		        	text: 'Personal Information'
+		        	color: 1, 0, 0, 1
+		        	font_size: 30
+
+		        GridLayout:
+		        	cols: 4
+					Label:
+						color: 1,0,0,1
+						text: 'First Name:'
+						font_size: 20
+
+					TextInput:
+						multiline: False
+
+					Label:
+						color: 1,0,0,1
+						text: 'Last Name:'
+						font_size: 20
+
+					TextInput:
+						multiline: False	
+
+				GridLayout:
+					cols: 2
+
+					Label:
+						color: 1,0,0,1
+						text: 'Email Address:'
+						font_size: 20
+
+					TextInput:
+						multiline: False
+						size_hint_x: 2.45
+				Label:
+				Label:
+					text: 'Create A Password'
+					color: (1, 0, 0, 1)
+					font_size: 30
+
+				GridLayout:
+					cols: 2
+
+					Label:
+						color: 1,0,0,1
+						text: 'Password: '
+						font_size: 20
+
+					TextInput:
+						multiline: False
+						size_hint_x: 2.45
+
+				GridLayout:
+					cols: 2
+
+					Label:
+						color: 1,0,0,1
+						text: 'Confirm Password: '
+						font_size: 20
+
+					TextInput:
+						multiline: False
+						size_hint_x: 2.45
+
+				Label:
+
+				GridLayout:
+					cols: 2
+					Label:
+					Button:
+					    text:'Next'
+					    size_hint: (.15, .1)
+					    pos_hint: {'x': .05, 'y':.85}
+					    on_release:
+					    	app.root.current = 'CreateHostAccount2'
+
+
+
+########################################################################
+
+######################### CREATE HOST ACCOUNT 2 ########################
+
+
+<CreateHostAccount2Window>:
+	name:'CreateHostAccount2'
+
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+	FloatLayout:
+		Button:
+		    text:'Back'
+		    size_hint: (.15, .1)
+		    pos_hint: {'x': .05, 'y':.85}
+		    on_release:
+		    	app.root.current = 'CreateHostAccount'
+
+    	ScrollView:
+    	    size_hint_y: .73
+    		pos_hint: {'x': 0.1,'y': .11}
+    		do_scroll_x: False
+    		do_scroll_y: True
+    		scroll_type: ['bars', 'content']
+
+
+    		GridLayout:
+
+    			size: (root.width, root.height)
+    			size_hint_x: 0.8
+    			size_hint_y: 2
+    			cols: 1
+    			height: self.minimum_height
+		        row_default_height: 30
+		        row_force_default: True
+		        spacing: 25
+
+				Label:
+					color: 1,0,0,1
+					text: 'Property Address'
+					font_size: 30
+
+				GridLayout:
+					cols:2 
+					spacing: 25
+					row_default_height: 30
+		        	row_force_default: True
+
+					Label:
+						color: 1, 0, 0, 1
+						text: 'Street Address:'
+						font_size: 20
+
+					TextInput:
+						multiline: False
+						size_hint_x: 2.4
+
+					Label: 
+						color: 1, 0, 0, 1
+						text: 'Country:'
+						font_size: 20
+
+					Button:
+						text: 'Click to Select Country'
+						background_color: (1, 0, 1, 1)
+						on_release:
+							Factory.Country().open(self)
+
+				Label:
+
+
+				GridLayout:
+					spacing: 25
+					cols: 4
+					row_default_height: 30
+					row_force_default: True
+
+					Label:
+						color: 1, 0, 0, 1
+						text: 'City'
+						font_size: 20
+
+					Button:
+						text: 'Click to Select a City'
+						background_color: (1, 0, 1, 1)
+						size_hint_x: 1.5
+						on_release:
+							Factory.State().open(self)
+
+					Label:
+						color: 1, 0, 0, 1
+						text: 'State'
+						font_size: 20
+
+					Button:
+						text: 'Click to Select a State'
+						background_color: (1, 0, 1, 1)
+						size_hint_x: 1.5
+						on_release:
+							Factory.State().open(self)
+
+				GridLayout:
+
+					cols: 3
+					spacing: 25
+					row_default_height: 30
+					row_force_default: True
+
+					Label:
+						text: 'Zip Code'
+						color: (1, 0, 0, 1)
+						font_size: 20
+					TextInput:
+						multiline: False
+					Label:
+
+				Label:
+
+					
+				Label:
+					text: 'Mailing Address'
+					color: (1, 0, 0, 1)
+					font_size: 30
+
+				GridLayout:
+					cols:2 
+					spacing: 25
+					row_default_height: 30
+		        	row_force_default: True
+
+					Label:
+						color: 1, 0, 0, 1
+						text: 'Street Address:'
+						font_size: 20
+
+					TextInput:
+						multiline: False
+						size_hint_x: 2.4
+
+					Label: 
+						color: 1, 0, 0, 1
+						text: 'Country:'
+						font_size: 20
+
+					Button:
+						text: 'Click to Select Country'
+						background_color: (1, 0, 1, 1)
+						on_release:
+							Factory.Country().open(self)
+
+				Label:
+
+
+				GridLayout:
+					spacing: 25
+					cols: 4
+					row_default_height: 30
+					row_force_default: True
+
+					Label:
+						color: 1, 0, 0, 1
+						text: 'City'
+						font_size: 20
+
+					Button:
+						text: 'Click to Select a City'
+						background_color: (1, 0, 1, 1)
+						size_hint_x: 1.5
+						on_release:
+							Factory.State().open(self)
+
+					Label:
+						color: 1, 0, 0, 1
+						text: 'State'
+						font_size: 20
+
+					Button:
+						text: 'Click to Select a State'
+						background_color: (1, 0, 1, 1)
+						size_hint_x: 1.5
+						on_release:
+							Factory.State().open(self)
+
+				GridLayout:
+
+					cols: 3
+					spacing: 25
+					row_default_height: 30
+					row_force_default: True
+
+					Label:
+						text: 'Zip Code'
+						color: (1, 0, 0, 1)
+						font_size: 20
+					TextInput:
+						multiline: False
+					Label:
+
+
+
+
+############## User Account Page #######################
+
+
+<CreateUserAccountWindow>:
+
+	name:'CreateUserAccount'
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+    FloatLayout:
+
+    	Label:
+    		color: 1, 0, 0, 1
+    		font_size: 60
+    		pos_hint: {'None': None}
+    		text: 'Create User Account'
+
+    	Button:
+    		text:'Back'
+    		size_hint: (.15, .1)
+    		pos_hint: {'x': .1, 'y':.8}
+    		on_release:
+    			app.root.current = 'Login'
+
+#######################################################
+
+
+
+
+
+
+
+
+################# EXPLORE LAND PAGE ######################
+
+<ExploreLandWindow>:
+	name:'ExploreLand'
+	search: Search
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+    FloatLayout:
+
+    	Label:
+    		color: 0, .02, .9, .5
+    		font_size: 20
+    		pos_hint: {'x': 0, 'y': .45}
+    		text: 'Explore Land'
+
+    	#Search Box
+    	TextInput:
+    		id: Search
+    		multiline: False
+    		size_hint: (.48,.05)
+    		pos_hint: {'x':.28, 'y':.87}
+
+    	#Search Button
+    	Button:
+    		size_hint:(.06, .05)
+    		pos_hint: {'x': .77, 'y': .87}
+    		background_color: 0, .02, .9, .5
+    		text: 'search'
+    		on_release:
+    			
+
+
+    	#Filter Button
+    	Button:
+    		size_hint: (.08, .08)
+    		text: 'filter'
+    		pos_hint: {'x': .1, 'y': .85}
+    		background_color: 0, .02, .9, .5
+    		on_release: 
+    			Factory.Filter().open()
+
+	    #SCROLLVIEW	
+    	ScrollView:
+    		size_hint_y: .73
+    		pos_hint: {'x': 0,'y': .11}
+    		do_scroll_x: False
+    		do_scroll_y: True
+    		scroll_type: ['bars', 'content']
+
+
+
+    		GridLayout:
+    			size: (root.width, root.height)
+    			size_hint_x: None
+    			size_hint_y: 3.5
+    			cols: 4
+    			height: self.minimum_height
+		        row_default_height: 180
+		        row_force_default: True
+
+
+	    	#Carousel 1 for the explore page (property 1)
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+				# Carousel: 
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+
+				# Carousel: 
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+
+				#Carousel:
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+
+				#Carousel:
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+
+
+				Carousel: 
+
+					direction: 'right'
+
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample1.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample2.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample3.png'
+					AsyncImage:
+						source:
+							'/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/images/sample4.png'
+
+
+
+
+													
+
+		ActionBar:
+			pos:(0,0)
+			size_hint: (1,0.1)
+			background_color: 0, .02, .9, .5
+
+
+			ActionView:
+				id: av		
+
+				ActionPrevious:
+					with_previous: False
+					title: ''
+					app_icon: ''
+					
+				ActionButton:
+					on_press:
+						app.root.current = 'Profile'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/profile.png'
+
+				ActionButton:
+
+					on_press:
+						app.root.current = 'BrowseLand'
+					id: btn_Browse
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/browse.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'FAQ'
+					id: btn_FAQ
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/FAQ.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'ExploreLand'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/search.png'
+
+				ActionButton:
+					on_press:
+						app.root.current = 'Favorites'
+					id: btn_Favorites
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/Favorites.png'
+
+
+
+
+
+
+
+#######################################################
+
+ 
+
+
+
+
+
+
+
+
+############### SEARCH LAND PAGE #####################
+
+<BrowseLandWindow>:
+	name:'BrowseLand'
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+	FloatLayout:
+
+		Label:
+			text: 'This will be the Page where you browse for land by category'
+			font_size: 30
+			color: 1, 0, 0, 1
+
+
+		ActionBar:
+			pos:(0,0)
+			size_hint: (1,0.1)
+			background_color: 0, .02, .9, .5
+
+
+			ActionView:
+				id: av		
+
+				ActionPrevious:
+					with_previous: False
+					title: ''
+					app_icon: ''
+					
+				ActionButton:
+					on_press:
+						app.root.current = 'Profile'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/profile.png'
+
+				ActionButton:
+
+					on_press:
+						app.root.current = 'BrowseLand'
+					id: btn_Browse
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/browse.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'FAQ'
+					id: btn_FAQ
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/FAQ.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'ExploreLand'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/search.png'
+
+				ActionButton:
+					on_press:
+						app.root.current = 'Favorites'
+					id: btn_Favorites
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/Favorites.png'
+
+
+#######################################################
+
+
+
+
+
+
+
+
+
+############### FAVORITES PAGE ######################
+
+<FavoritesWindow>:
+	name:'Favorites'
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+	FloatLayout:
+
+		Label:
+			text:'This will be where your Favorites are'
+			font_size: 40
+			color: 1, 0, 0, 1
+
+		ActionBar:
+			pos:(0,0)
+			size_hint: (1,0.1)
+			background_color: 0, .02, .9, .5
+
+
+			ActionView:
+				id: av		
+
+				ActionPrevious:
+					with_previous: False
+					title: ''
+					app_icon: ''
+					
+				ActionButton:
+					on_press:
+						app.root.current = 'Profile'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/profile.png'
+
+				ActionButton:
+
+					on_press:
+						app.root.current = 'BrowseLand'
+					id: btn_Browse
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/browse.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'FAQ'
+					id: btn_FAQ
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/FAQ.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'ExploreLand'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/search.png'
+
+				ActionButton:
+					on_press:
+						app.root.current = 'Favorites'
+					id: btn_Favorites
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/Favorites.png'
+
+
+#######################################################
+
+
+
+
+
+
+
+
+
+################## PROFILE PAGE #######################
+<ProfileWindow>:
+	name: 'Profile'
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+	FloatLayout:
+
+    	Button:
+    		background_color: 0, .02, .9, .5
+    		text:'Sign-Out'
+    		size_hint: (.15, .1)
+    		pos_hint: {'x': .01, 'y':.89}
+    		on_release:
+    			app.root.current = 'Login'
+
+		Label:
+			color: 1, 0, 0, 1
+			text: 'This will be your profile page'
+			font_size: 40
+
+		ActionBar:
+			pos:(0,0)
+			size_hint: (1,0.1)
+			background_color: 0, .02, .9, .5
+
+
+			ActionView:
+				id: av		
+
+				ActionPrevious:
+					with_previous: False
+					title: ''
+					app_icon: ''
+					
+				ActionButton:
+					on_press:
+						app.root.current = 'Profile'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/profile.png'
+
+				ActionButton:
+
+					on_press:
+						app.root.current = 'BrowseLand'
+					id: btn_Browse
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/browse.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'FAQ'
+					id: btn_FAQ
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/FAQ.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'ExploreLand'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/search.png'
+
+				ActionButton:
+					on_press:
+						app.root.current = 'Favorites'
+					id: btn_Favorites
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/Favorites.png'
+
+
+#######################################################
+
+
+
+
+
+
+##################### FAQ PAGE #########################
+<FAQWindow>:
+	name:'FAQ'
+
+    canvas.before:
+        Color: 
+        	rgba: .94,1,.9, 1
+        Rectangle:
+        	pos: self.pos
+        	size: self.size
+
+	FloatLayout:
+
+		Label:
+			color: 1, 0, 0, 1
+			text: "This page is for FAQ's"
+			font_size: 40
+
+		ActionBar:
+			pos:(0,0)
+			size_hint: (1,0.1)
+			background_color: 0, .02, .9, .5
+
+
+			ActionView:
+				id: av		
+
+				ActionPrevious:
+					with_previous: False
+					title: ''
+					app_icon: ''
+					
+				ActionButton:
+					on_press:
+						app.root.current = 'Profile'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/profile.png'
+
+				ActionButton:
+
+					on_press:
+						app.root.current = 'BrowseLand'
+					id: btn_Browse
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/browse.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'FAQ'
+					id: btn_FAQ
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/FAQ.png'
+
+
+				ActionButton:
+					on_press:
+						app.root.current = 'ExploreLand'
+					id: btn_Profile
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/search.png'
+
+				ActionButton:
+					on_press:
+						app.root.current = 'Favorites'
+					id: btn_Favorites
+					text: ''
+					icon: '/Users/iantaylor/Desktop/PyVirtualEnvironments/Land/Icons/Favorites.png'
+
+
+#######################################################
+
+
+
+
+
+
+	
